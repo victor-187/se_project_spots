@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 60px;
+  color: #212121;
+  opacity: 70%;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  line-height: 1;
+}
+
+@media screen and (max-width: 627px) {
+  .footer {
+    padding: 0 108px 60px;
+  }
+}
