@@ -20,7 +20,8 @@ The Spots project is a responsive image sharing website that would keep its stru
 - Figma
 - Images
 
-##deployment
+## deployment
+
 This webpage is deployed to GitHub Pages
 
 [-deployment Link:](https://victor-187.github.io/se_project_spots/)
@@ -36,3 +37,7 @@ This project is made so all the elements are displayed correctly on popular scre
 **Images**
 
 ![Spots ](/images/Spots-ss.png)
+
+## Video##
+
+[spots video](https://drive.google.com/file/d/1iBTRNGnnSpkAoQU-rI4T0xryXV3KRCTX/view?usp=sharing)
