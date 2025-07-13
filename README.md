@@ -2,7 +2,7 @@
 
 A responsive image sharing website.
 
-##Description
+## Description
 
 The Spots project is a responsive image sharing website that would keep its structure no matter the with of the screen its displayed on.To have all this elements working correctly we had to implement media queries to keep a good structure when using different devices.hover was also implemented on some elements.
 
