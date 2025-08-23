@@ -58,6 +58,7 @@ function openModal(modal) {
 function closeModal(modal) {
   modal.classList.remove("modal__is-opened");
 }
+
 function openEditProfileModal() {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
