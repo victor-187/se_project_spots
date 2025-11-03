@@ -44,6 +44,7 @@ const editProfileNameInput = editProfileModal.querySelector(
 const editProfileDescriptionInput = editProfileModal.querySelector(
   "#profile-description-input"
 );
+const editSaveBtn = editProfileModal.querySelector(".modal__save-btn");
 
 const previewModal = document.querySelector("#preview-modal");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
@@ -68,7 +69,7 @@ modals.forEach((modal) => {
   modal.addEventListener("click", (event) => {
     if (event.target.classList.contains("modal")) {
       closeModal(modal);
-      //resetValidation(newPostModal, [linkInput, captionInput], settings);
+      resetValidation(newPostModal, [linkInput, captionInput], settings);
     }
   });
 });
@@ -140,6 +141,7 @@ function openEditProfileModal() {
     settings
   );
   openModal(editProfileModal);
+  disableButton(editSaveBtn, settings);
 }
 
 editProfileBtn.addEventListener("click", openEditProfileModal);
