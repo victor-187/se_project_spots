@@ -58,7 +58,7 @@ const newPostSaveBtn = newPostModal.querySelector(".modal__save-btn");
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 
-const submitProfileForm = newPostModal.querySelector(".modal__form");
+const NewPostForm = newPostModal.querySelector(".modal__form");
 const captionInput = newPostModal.querySelector("#card-caption-input");
 const linkInput = newPostModal.querySelector("#card-image-input");
 
@@ -68,7 +68,7 @@ modals.forEach((modal) => {
   modal.addEventListener("click", (event) => {
     if (event.target.classList.contains("modal")) {
       closeModal(modal);
-      resetValidation(newPostModal, [linkInput, captionInput], settings);
+      //resetValidation(newPostModal, [linkInput, captionInput], settings);
     }
   });
 });
@@ -112,20 +112,23 @@ function getCardElement(data) {
   return cardElement;
 }
 
+function handleEscape(evt) {
+  if (evt.key === "Escape") {
+    const openModal = document.querySelector(".modal__is-opened");
+    if (openModal) {
+      closeModal(openModal);
+    }
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal__is-opened");
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-      const openModal = document.querySelector(".modal__is-opened");
-      if (openModal) {
-        closeModal(openModal);
-      }
-    }
-  });
+  document.addEventListener("keydown", handleEscape);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal__is-opened");
+  document.removeEventListener("keydown", handleEscape);
 }
 
 function openEditProfileModal() {
@@ -152,7 +155,6 @@ newPostBtn.addEventListener("click", function () {
 
 newPostCloseBtn.addEventListener("click", function () {
   closeModal(newPostModal);
-  resetValidation(newPostModal, [linkInput, captionInput], settings);
 });
 
 function handleEditProfileSubmit(evt) {
@@ -172,12 +174,13 @@ function handleNewPostSubmit(evt) {
     link: linkInput.value,
   });
   cardsList.prepend(cardElement);
+  resetValidation(newPostModal, [linkInput, captionInput], settings);
   closeModal(newPostModal);
   disableButton(newPostSaveBtn, settings);
-  submitProfileForm.reset();
+  NewPostForm.reset();
 }
 
-submitProfileForm.addEventListener("submit", handleNewPostSubmit);
+NewPostForm.addEventListener("submit", handleNewPostSubmit);
 
 initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
