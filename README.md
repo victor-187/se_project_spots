@@ -38,6 +38,11 @@ This project is made so all the elements are displayed correctly on popular scre
 
 ![Spots ](/images/Spots-ss.png)
 
-## Video##
+## videos##
 
 [spots video](https://drive.google.com/file/d/1iBTRNGnnSpkAoQU-rI4T0xryXV3KRCTX/view?usp=sharing)
+
+## Project Pitch Video
+
+Check out [VictorReyes-ProjectPitch-SpotsStage9](https://drive.google.com/file/d/1wCUa1ZgUjesjorzxrLvSXTgB-zDoF2PR/view?usp=sharing), where I describe my
+project and some challenges I faced while building it.
